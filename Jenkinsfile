@@ -15,7 +15,7 @@ pipeline {
         stage('build'){
             steps {
               echo 'build ...'
-              //sh ("./initial/mvn package")
+              sh ("./initial/mvn package")
               /*
               sh ("pwd")
               sh ("cd initial")
