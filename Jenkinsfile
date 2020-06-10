@@ -5,7 +5,7 @@ pipeline {
     //agent { docker 'maven:3-alpine' }  //NotOK
     //tools { maven 'apache-maven-3.6.1' }
     tools { 
-        maven 'maven-3.6.1', 
+        maven 'maven-3.6.1'
         jdk 'jdk-1.8.0_201' 
     }
     //tools { jdk 'jdk-1.8.0_201'}
