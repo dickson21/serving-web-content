@@ -15,14 +15,14 @@ pipeline {
         stage('build'){
             steps {
               echo 'build ...'
-              sh ("./initial/mvn package")
+              //sh ("./initial/mvn package")
               /*
               sh ("pwd")
               sh ("cd initial")
               sh ("pwd")
               sh ("mvn package")
               */
-              //sh ("./create_war.sh")
+              sh ("./create_war.sh")
               //sh "mvn -version"
               //sh ("mvn version")
               //sh './create_war.sh'
