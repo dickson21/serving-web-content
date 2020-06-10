@@ -28,9 +28,9 @@ pipeline {
                 sh ("chmod +x deploy.sh")
                 sh ("chmod +x undeploy.sh")
                 //sh ("./deploy_war.sh")
-                //sh ("./deploy.sh")
+                sh ("./deploy.sh")
                 //sh ("java weblogic.Deployer")
-                sh ("java wlthint3client.Deployer")
+                //sh ("java wlthint3client.Deployer")
             }
         } //deploy
        
