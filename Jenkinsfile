@@ -8,31 +8,20 @@ pipeline {
     stages {
         stage('test') {
             steps {
-                //sh 'mvn test' 
                 echo 'initialise..'
             }
         } //test
         stage('build'){
             steps {
               echo 'build ...'
-              //sh ("./initial/mvn package")
-              /*
-              sh ("pwd")
-              sh ("cd initial")
-              sh ("pwd")
-              sh ("mvn package")
-              */
+              sh ("chmod +x create_war.sh")
               sh ("./create_war.sh")
-              //sh "mvn -version"
-              //sh ("mvn version")
-              //sh './create_war.sh'
-              //sh 'mvn -version'  //NotOK
-              //sh '''mvn -version'''
             }
         } //build
         stage('deploy') {
             steps {
                 echo 'deploy..'
+                sh ("chmod +x deploy_war.sh")
                 sh ("./deploy_war.sh")
             }
         } //test
