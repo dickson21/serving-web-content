@@ -10,7 +10,8 @@ pipeline {
         }
         stage('build'){
             steps {
-              echo 'build OK'
+              echo 'build ...'
+              sh './initial/mvn package'
             }
         }
     }
