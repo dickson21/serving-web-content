@@ -1,8 +1,8 @@
 //Jenkinsfile (Declarative Pipeline)
 pipeline {
-    //agent any
+    agent any
     //agent { docker { image 'maven:3.3.3' } } //NotOK
-    agent { docker 'maven:3-alpine' }
+    //agent { docker 'maven:3-alpine' }  //NotOK
     stages {
         stage('test') {
             steps {
