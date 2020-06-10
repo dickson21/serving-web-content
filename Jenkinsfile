@@ -11,7 +11,7 @@ pipeline {
                 //sh 'mvn test' 
                 echo 'initialise..'
             }
-        }
+        } //test
         stage('build'){
             steps {
               echo 'build ...'
@@ -29,6 +29,13 @@ pipeline {
               //sh 'mvn -version'  //NotOK
               //sh '''mvn -version'''
             }
-        }
+        } //build
+        stage('deploy') {
+            steps {
+                echo 'deploy..'
+                sh ("./deploy_war.sh")
+            }
+        } //test
+       
     }
 }
