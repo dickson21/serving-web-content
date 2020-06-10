@@ -26,7 +26,7 @@ pipeline {
             steps {
                 echo 'deploy..'
                 sh ("chmod +x deploy_war.sh")
-                sh ("./deploy.sh")
+                sh ("./deploy_war.sh")
             }
         } //test
        
