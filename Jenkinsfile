@@ -1,6 +1,6 @@
 pipeline {
-    agent any
-    //agent { docker { image 'maven:3.3.3' } } //NotOK
+    //agent any
+    agent { docker { image 'maven:3.3.3' } } //NotOK
 
     stages {
         stage('test') {
@@ -13,7 +13,6 @@ pipeline {
             steps {
               echo 'build ...'
               //sh ("./initial/mvn package")
-                echo 'build ...'
               /*
               sh ("pwd")
               sh ("cd initial")
