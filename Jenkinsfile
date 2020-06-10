@@ -28,7 +28,8 @@ pipeline {
                 sh ("chmod +x deploy.sh")
                 sh ("chmod +x undeploy.sh")
                 //sh ("./deploy_war.sh")
-                sh ("./deploy.sh")
+                //sh ("./deploy.sh")
+                sh ("java weblogic.Deoloyer")
             }
         } //deploy
        
