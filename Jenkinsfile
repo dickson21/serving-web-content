@@ -4,8 +4,11 @@ pipeline {
     //agent { docker { image 'maven:3.3.3' } } //NotOK
     //agent { docker 'maven:3-alpine' }  //NotOK
     //tools { maven 'apache-maven-3.6.1' }
-    tools { maven 'maven-3.6.1' }
-    tools { jdk 'jdk-1.8.0_201'}
+    tools { 
+        maven 'maven-3.6.1', 
+        jdk 'jdk-1.8.0_201' 
+    }
+    //tools { jdk 'jdk-1.8.0_201'}
     stages {
         stage('test') {
             steps {
