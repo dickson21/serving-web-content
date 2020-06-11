@@ -24,13 +24,9 @@ pipeline {
         stage('deploy') {
             steps {
                 echo 'deploy..'
-                sh ("chmod +x deploy_war.sh")
                 sh ("chmod +x deploy.sh")
                 sh ("chmod +x undeploy.sh")
-                //sh ("./deploy_war.sh")
                 sh ("./deploy.sh")
-                //sh ("java weblogic.Deployer")
-                //sh ("java wlthint3client.Deployer")
             }
         } //deploy
        
