@@ -3,7 +3,7 @@ pipeline {
     agent any
     tools { 
         maven 'maven-3.6.1'
-        jdk 'jdk-1.8.0_201' 
+        jdk 'jdk-1.6_45' 
     }
     stages {
         stage('initialise') {
